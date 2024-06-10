@@ -25,8 +25,7 @@ This project aims to create a frontend application for the Real Estate School Sy
 1. Clone the repository:
 
 ```bash
-```git clone <repository-url>
-```
+    git clone <repository-url>
 
 
 ## Install dependencies:
