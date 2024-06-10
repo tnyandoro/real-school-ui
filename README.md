@@ -1,85 +1,100 @@
-# Real Estate School System Frontend
 
-## Introduction
+\# Real Estate School System Frontend
+
+\## Introduction
 
 This project aims to create a frontend application for the Real Estate School System. The frontend will consume the API provided by the backend system, enabling users to interact with various functionalities such as student enrollment, course management, certification issuance, and more.
 
-## Features
+\## Features
 
-- **User Authentication**: Allow users to sign in or sign up securely to access the system.
-- **Student Portal**: Provide a user-friendly interface for students to enroll in courses, track their progress, and view certifications.
-- **Course Management**: Allow administrators to manage courses, add new modules, and update course content.
-- **Certification Issuance**: Enable the system to generate and issue electronic certificates upon course completion.
-- **Real-Time Updates**: Display real-time updates on student progress, course availability, and certification status.
+\- \*\*User Authentication\*\*: Allow users to sign in or sign up securely to access the system.
 
-## Technology Stack
+\- \*\*Student Portal\*\*: Provide a user-friendly interface for students to enroll in courses, track their progress, and view certifications.
 
-- **Vue.js**: Frontend JavaScript framework for building interactive web interfaces.
-- **Vue Router**: Official router for Vue.js, providing navigation capabilities.
-- **Vuex**: State management library for Vue.js applications.
-- **Axios**: HTTP client for making API requests.
-- **BootstrapVue**: Bootstrap components for Vue.js, providing pre-styled UI components.
+\- \*\*Course Management\*\*: Allow administrators to manage courses, add new modules, and update course content.
 
-## Getting Started
+\- \*\*Certification Issuance\*\*: Enable the system to generate and issue electronic certificates upon course completion.
 
-1. Clone the repository:
+\- \*\*Real-Time Updates\*\*: Display real-time updates on student progress, course availability, and certification status.
 
-```bash
-    git clone <repository-url>
+\## Technology Stack
 
+\- \*\*Vue.js\*\*: Frontend JavaScript framework for building interactive web interfaces.
 
-## Install dependencies:
-- **bash**
-### Copy code
+\- \*\*Vue Router\*\*: Official router for Vue.js, providing navigation capabilities.
+
+\- \*\*Vuex\*\*: State management library for Vue.js applications.
+
+\- \*\*Axios\*\*: HTTP client for making API requests.
+
+\- \*\*BootstrapVue\*\*: Bootstrap components for Vue.js, providing pre-styled UI components.
+
+\## Getting Started
+
+1\. Clone the repository:
+
+\`\`\`bash
+
+git clone
+
+\`\`\`
+
+2\. Install dependencies:
+
+\`\`\`bash
+
 cd real-estate-school-frontend
+
 npm install
-- **Configure API endpoint:**
+
+\`\`\`
+
+3\. Configure API endpoint:
 
 Update the API endpoint in the Vue application to point to the backend API URL.
 
-- **Run the development server:**
+4\. Run the development server:
 
-bash
-Copy code
+\`\`\`bash
+
 npm run serve
-Open the application in your browser:
-bash
-Copy code
+
+\`\`\`
+
+5\. Open the application in your browser:
+
+\`\`\`bash
+
 http://localhost:8080
-Usage
-Sign in or sign up to access the student portal.
-Enroll in courses, track progress, and view certifications.
-Administrators can manage courses, update content, and issue certifications.
-Contributing
-Contributions, bug reports, and feature requests are welcome! Please check the contribution guidelines before submitting a pull request.
 
+\`\`\`
 
+\## Usage
 
+\- Sign in or sign up to access the student portal.
 
-## Authors
+\- Enroll in courses, track progress, and view certifications.
 
-👤 **Tendai Nyandoro**
+\- Administrators can manage courses, update content, and issue certifications.
 
-- GitHub: [@Tendai Nyandoro](https://github.com/tnyandoro)
-- Twitter: [@tendai28](https://twitter.com/tendai28)
-- LinkedIn: [Tendai Nyandoro](https://www.linkedin.com/in/tendai-nyandoro/)
+\## Contributing
 
-## 🤝 Contributing
+Contributions, bug reports, and feature requests are welcome! Please check the \[contribution guidelines\](CONTRIBUTING.md) before submitting a pull request.
 
-Contributions, issues and feature requests are welcome!
+\## Authors
 
-Feel free to check the [issues page](https://github.com/tnyandoro/real-school-ui/issues/).
+👤 \*\*Tendai Nyandoro\*\*
 
-## Show your support
+\- GitHub: \[@Tendai Nyandoro\](https://github.com/tnyandoro)
+
+\- Twitter: \[@tendai28\](https://twitter.com/tendai28)
+
+\- LinkedIn: \[Tendai Nyandoro\](https://www.linkedin.com/in/tendai-nyandoro/)
+
+\## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+\## License
 
-- The UI Design credit goes to for the capstone program
-
-
-## 📝 License
-
-MIT License
-
+This project is licensed under the MIT License - see the \[LICENSE\](LICENSE) file for details.
