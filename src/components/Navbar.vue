@@ -1,36 +1,55 @@
-<!-- src/components/Navbar.vue -->
-
 <template>
   <div>
     <div class="red-bar"></div>
-    <div class="white-navbar">
+    <div class="white-navbar" :class="{ 'sticky': isSticky }">
       <div class="logo-container">
         <img alt="Vue logo" src="@/assets/logo.jpeg" class="h-20">
       </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li>
+            <router-link to="/students">Students</router-link>
+          </li>
+          <li>
+            <router-link to="/teachers">Teachers</router-link>
+          </li>
+          <li>
+            <router-link to="/courses">Courses</router-link>
+          </li>
+          <li>
+            <router-link to="/login">Login</router-link>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li>
-          <router-link to="/students">Students</router-link>
-        </li>
-        <li>
-          <router-link to="/teachers">Teachers</router-link>
-        </li>
-        <li>
-          <router-link to="/courses">Courses</router-link>
-        </li>
-        <li>
-          <router-link to="/login">Login</router-link>
-        </li>
-      </ul>
-    </nav>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'NavbarComponent'
-}
+  name: 'NavbarComponent',
+  data() {
+    return {
+      isSticky: false
+    };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      // Check if we should make the navbar sticky
+      if (window.pageYOffset > 0) {
+        this.isSticky = true;
+      } else {
+        this.isSticky = false;
+      }
+    }
+  }
+};
 </script>
 
 <style scoped>
@@ -40,8 +59,17 @@ export default {
 }
 
 .white-navbar {
-  
   background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -61,7 +89,7 @@ export default {
 
 .logo {
   height: 100%;
-  margin-right: 1rem; 
+  margin-right: 1rem;
 }
 
 .nav-links {

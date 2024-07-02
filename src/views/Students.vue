@@ -1,3 +1,4 @@
+<!-- StudentsPage.vue -->
 <template>
   <div>
     <h1>Students Page</h1>
@@ -12,6 +13,10 @@
             <p><strong>Phone Number:</strong> {{ student.phone_number }}</p>
             <p><strong>Address:</strong> {{ student.address }}</p>
             <p><strong>Identification:</strong> {{ student.identification }}</p>
+            <div class="flex space-x-4">
+              <router-link :to="{ name: 'StudentDetails', params: { id: student.id }}" class="view-button">View</router-link>
+              <router-link :to="{ name: 'StudentDetails', params: { id: student.id }}" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">Edit</router-link>
+            </div>
           </div>
           <hr>
         </li>
@@ -41,7 +46,7 @@ export default {
       this.loading = false; // Handle error state
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -50,5 +55,19 @@ export default {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
+}
+
+.view-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+  text-decoration: none;
 }
 </style>
