@@ -1,7 +1,6 @@
-<!-- StudentsPage.vue -->
 <template>
   <div>
-    <h1>Students Page</h1>
+    <h1 class="font-bold">Enrolled Students</h1>
     <div v-if="loading">Loading...</div>
     <div v-else>
       <ul>
@@ -13,9 +12,9 @@
             <p><strong>Phone Number:</strong> {{ student.phone_number }}</p>
             <p><strong>Address:</strong> {{ student.address }}</p>
             <p><strong>Identification:</strong> {{ student.identification }}</p>
-            <div class="flex space-x-4">
-              <router-link :to="{ name: 'StudentDetails', params: { id: student.id }}" class="view-button">View</router-link>
-              <router-link :to="{ name: 'StudentDetails', params: { id: student.id }}" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">Edit</router-link>
+            <div class="flex flex-row space-x-4">
+              <button @click="viewStudentDetails(student.id)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View</button>
+              <button @click="editStudent(student.id)" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Edit</button>
             </div>
           </div>
           <hr>
@@ -45,6 +44,14 @@ export default {
       console.error('Error fetching students:', error);
       this.loading = false; // Handle error state
     }
+  },
+  methods: {
+    viewStudentDetails(id) {
+      this.$router.push({ name: 'StudentDetails', params: { id } });
+    },
+    editStudent(id) {
+      this.$router.push({ name: 'EditStudent', params: { id } });
+    }
   }
 };
 </script>
@@ -55,19 +62,5 @@ export default {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
-}
-
-.view-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-}
-
-.view-button:hover {
-  background-color: #0056b3;
-  text-decoration: none;
 }
 </style>

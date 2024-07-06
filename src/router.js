@@ -2,23 +2,34 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Students from './views/Students.vue';
 import Courses from './views/Courses.vue';
 import Teachers from './views/Teachers.vue';
-import AddStudent from './views/AddStudent.vue';
+import StudentForm from './views/StudentForm.vue';
 import StudentDetails from './views/StudentDetails.vue';
 import AddTeacher from './views/AddTeacher.vue';
 
 const routes = [
-    {
-        path: '/students',
-        name: 'Students',
-        component: Students
-    },
-    {
+  {
+    path: '/students',
+    name: 'Students',
+    component: Students
+  },
+  {
+    path: '/students/new',
+    name: 'NewStudent',
+    component: StudentForm
+  },
+  {
+    path: '/students/:id/edit',
+    name: 'EditStudent',
+    component: StudentForm,
+    props: true
+  },
+  {
     path: '/students/:id',
     name: 'StudentDetails',
     component: StudentDetails,
     props: true
-    },
-    {
+  },
+  {
     path: '/courses',
     name: 'Courses',
     component: Courses
@@ -27,11 +38,6 @@ const routes = [
     path: '/teachers',
     name: 'Teachers',
     component: Teachers
-  },
-  {
-    path: '/students/new',
-    name: 'AddStudent',
-    component: AddStudent
   },
   {
     path: '/teachers/new',
