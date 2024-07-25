@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'Sidebar',
+  name: 'SidebarComponent',
   computed: {
     isStudentsPage() {
       return this.$route.path === '/students';
@@ -30,31 +30,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.sidebar {
-  width: 200px;
-  background-color: #f4f4f4;
-  padding: 20px;
-  position: fixed;
-  height: 100%;
-  /* top: 0; /* Stick to the top of the viewport */
-  /* left: 0; */
-  /* overflow-y: auto; Enable scrolling if content exceeds height */ 
-}
-
-.sidebar button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.sidebar button:hover {
-  background-color: #0056b3;
-}
-</style>

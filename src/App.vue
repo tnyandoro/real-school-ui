@@ -2,7 +2,7 @@
   <div id="app">
     <NavbarComponent />
     <div class="main-layout">
-      <Sidebar />
+      <!-- <Sidebar /> -->
       <router-view class="main-content" />
     </div>
   </div>
@@ -10,32 +10,14 @@
 
 <script>
 import NavbarComponent from './components/Navbar.vue';
-import Sidebar from './components/Sidebar.vue';
+// import Sidebar from './components/Sidebar.vue';
 
 export default {
   name: 'App',
   components: {
     NavbarComponent,
-    Sidebar
+    // Sidebar
   }
 };
 </script>
 
-<style>
-#app {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.main-layout {
-  display: flex;
-  flex: 1;
-}
-
-.main-content {
-  flex: 1;
-  margin-left: 200px; /* Same width as sidebar */
-  padding: 20px;
-}
-</style>

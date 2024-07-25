@@ -1,28 +1,28 @@
 <template>
-  <div>
-    <div class="red-bar"></div>
-    <div class="white-navbar" :class="{ 'sticky': isSticky }">
-      <div class="logo-container">
-        <img alt="Vue logo" src="@/assets/logo.jpeg" class="h-20">
+  <!-- component -->
+  <nav class="font-sans flex flex-col text-center content-center sm:flex-row sm:text-left sm:justify-between py-2 px-6 bg-white shadow sm:items-baseline w-full">
+
+    <div class="mb-2 sm:mb-0 flex flex-row
+    ">
+      <div class="h-10 w-10 self-center mr-2">
+        <img class="h-10 w-10 self-center" src="@/assets/logo.jpeg" />
       </div>
-      <nav class="navbar">
-        <ul class="nav-links">
-          <li>
-            <router-link to="/students">Students</router-link>
-          </li>
-          <li>
-            <router-link to="/teachers">Teachers</router-link>
-          </li>
-          <li>
-            <router-link to="/courses">Courses</router-link>
-          </li>
-          <li>
-            <router-link to="/login">Login</router-link>
-          </li>
-        </ul>
-      </nav>
+      <div>
+        <a href="/home" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark font-sans font-bold">The Real Estate Institute of Zimbabwe</a><br>
+        <span class="text-xs text-grey-dark"></span>
+      </div>
     </div>
-  </div>
+
+    <div class="sm:mb-0 self-center">
+      <!-- <div class="h-10" style="display: table-cell, vertical-align: middle;"> -->
+      <a href="#" class="text-md no-underline text-black hover:text-blue-dark ml-2 px-1">Guest</a>
+      <a href="#" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">Register</a>
+      <!-- <a href="/two" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">About Us</a> -->
+      <a href="#" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">Login</a>
+      <!-- </div> -->
+
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -36,7 +36,7 @@ export default {
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
   },
-  destroyed() {
+  unmounted() {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
@@ -52,62 +52,3 @@ export default {
 };
 </script>
 
-<style scoped>
-.red-bar {
-  height: 34px;
-  background-color: #f00;
-}
-
-.white-navbar {
-  background-color: #fff;
-  transition: all 0.3s ease;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-}
-
-.logo {
-  height: 100%;
-  margin-right: 1rem;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-links li {
-  margin: 0;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-</style>
