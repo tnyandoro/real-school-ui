@@ -10,7 +10,6 @@
 
 <script>
 import NavbarComponent from './components/Navbar.vue';
-import Sidebar from './components/AppSidebar.vue';
 
 export default {
   name: 'App',
